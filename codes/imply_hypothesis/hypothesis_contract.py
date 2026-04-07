@@ -225,6 +225,9 @@ def normalize_token_candidates(
         parts = re.split(r"[,\n;/]+", text)
         for part in parts:
             token = part.strip().strip("\"'`").lower()
+            # Align with tokenizer-surface normalization:
+            # treat "▁token" and "token" as the same lexical item.
+            token = token.replace("▁", "")
             token = re.sub(r"\s+", " ", token)
             if not token:
                 continue
@@ -297,4 +300,3 @@ def add_simple_lexical_expansion(tokens: Sequence[str]) -> List[str]:
         else:
             expanded.append(base + "s")
     return normalize_token_candidates(expanded, max_items=96)
-

@@ -33,10 +33,14 @@ def build_hypothesis_messages(
         "Hard constraints:\n"
         f"- claims length: 1 to {max_claims}\n"
         "- each claim expresses one output-side effect only\n"
+        "- morphological variants from the same lemma/stem must stay in ONE claim, not split across claims\n"
+        "- if a token family includes multiple forms (e.g., conclude/conclusion/concluding), merge them into one target description\n"
         "- do not mention input-side signals such as activations/max_token/input-side traces\n"
         "- target must be specific, avoid broad wording like general themes\n"
         "- if uncertain, prefer conservative scope/context rather than inventing details\n"
-        "- if context_condition is not conditional, set condition_note to empty string"
+        "- if context_condition is not conditional, set condition_note to empty string\n"
+        "- bad split example: claim1 target=conclusion, claim2 target=conclude\n"
+        "- good merged example: one claim target=conclude/conclusion token family"
     )
 
     user_prompt = (
