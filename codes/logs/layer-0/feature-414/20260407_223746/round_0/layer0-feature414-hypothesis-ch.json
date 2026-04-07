@@ -1,0 +1,37 @@
+{
+  "summary": "This feature promotes tokens related to the English word 'conclusion' and its morphological variants, while suppressing unrelated or malformed tokens.",
+  "claims": [
+    {
+      "target_type": "token_family",
+      "target": "conclusion",
+      "polarity": "promote",
+      "scope": "focused",
+      "context_condition": "always",
+      "condition_note": "",
+      "manifestation": "logits"
+    },
+    {
+      "target_type": "token_family",
+      "target": "conclude",
+      "polarity": "promote",
+      "scope": "focused",
+      "context_condition": "always",
+      "condition_note": "",
+      "manifestation": "logits"
+    },
+    {
+      "target_type": "token_family",
+      "target": "NSCoder",
+      "polarity": "suppress",
+      "scope": "focused",
+      "context_condition": "always",
+      "condition_note": "",
+      "manifestation": "logits"
+    }
+  ],
+  "warnings": [
+    "claim_0_target_too_short",
+    "claim_1_target_too_short",
+    "claim_2_target_too_short"
+  ]
+}

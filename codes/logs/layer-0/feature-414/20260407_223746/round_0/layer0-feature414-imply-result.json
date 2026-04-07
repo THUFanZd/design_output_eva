@@ -1,0 +1,382 @@
+{
+  "metadata": {
+    "model_id": "gemma-2-2b",
+    "layer_id": "0",
+    "feature_id": "414",
+    "width": "16k",
+    "timestamp": "20260407_223746",
+    "round_id": "round_0",
+    "llm_model": "qwen-plus",
+    "source": "0-gemmascope-res-16k"
+  },
+  "evidence": {
+    "feature_ref": {
+      "model_id": "gemma-2-2b",
+      "layer_id": "0",
+      "feature_id": "414",
+      "source": "0-gemmascope-res-16k"
+    },
+    "output_side_observation": {
+      "pos_pairs": [
+        {
+          "rank": 1,
+          "text": "▁conclusion",
+          "value": 0.842
+        },
+        {
+          "rank": 2,
+          "text": "▁conclude",
+          "value": 0.815
+        },
+        {
+          "rank": 3,
+          "text": "▁concludes",
+          "value": 0.781
+        },
+        {
+          "rank": 4,
+          "text": "▁Conclusion",
+          "value": 0.759
+        },
+        {
+          "rank": 5,
+          "text": "lets",
+          "value": 0.751
+        },
+        {
+          "rank": 6,
+          "text": "▁Schluss",
+          "value": 0.748
+        },
+        {
+          "rank": 7,
+          "text": "▁CONCLUSION",
+          "value": 0.716
+        },
+        {
+          "rank": 8,
+          "text": "Conclusion",
+          "value": 0.713
+        },
+        {
+          "rank": 9,
+          "text": "conclusion",
+          "value": 0.704
+        },
+        {
+          "rank": 10,
+          "text": "▁conclure",
+          "value": 0.665
+        }
+      ],
+      "neg_pairs": [
+        {
+          "rank": 1,
+          "text": "▁NSCoder",
+          "value": -0.866
+        },
+        {
+          "rank": 2,
+          "text": "",
+          "value": -0.841
+        },
+        {
+          "rank": 3,
+          "text": "▁nahilalakip",
+          "value": -0.781
+        },
+        {
+          "rank": 4,
+          "text": "toHaveBeenCalled",
+          "value": -0.741
+        },
+        {
+          "rank": 5,
+          "text": "▁gynhyrchwyd",
+          "value": -0.69
+        },
+        {
+          "rank": 6,
+          "text": "▁nakalista",
+          "value": -0.688
+        },
+        {
+          "rank": 7,
+          "text": "﻿/**",
+          "value": -0.686
+        },
+        {
+          "rank": 8,
+          "text": "Хьажоргаш",
+          "value": -0.675
+        },
+        {
+          "rank": 9,
+          "text": "aarrggbb",
+          "value": -0.669
+        },
+        {
+          "rank": 10,
+          "text": "▁autorytatywna",
+          "value": -0.666
+        }
+      ]
+    },
+    "annotation_candidates": [
+      "the term \"conclusion\" and its variations in context of summarizing arguments or findings"
+    ]
+  },
+  "C_H": {
+    "summary": "This feature promotes tokens related to the English word 'conclusion' and its morphological variants, while suppressing unrelated or malformed tokens.",
+    "claims": [
+      {
+        "target_type": "token_family",
+        "target": "conclusion",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      {
+        "target_type": "token_family",
+        "target": "conclude",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      {
+        "target_type": "token_family",
+        "target": "NSCoder",
+        "polarity": "suppress",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      }
+    ],
+    "warnings": [
+      "claim_0_target_too_short",
+      "claim_1_target_too_short",
+      "claim_2_target_too_short"
+    ]
+  },
+  "compile_results": [
+    {
+      "claim_index": 0,
+      "claim": {
+        "target_type": "token_family",
+        "target": "conclusion",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "conclusion",
+        "conclude",
+        "concludes",
+        "concluded",
+        "concluding",
+        "conclusion:",
+        "conclusion.",
+        "conclusions"
+      ],
+      "S_weak": [
+        "conclure",
+        "schluss",
+        "conclut",
+        "concluye",
+        "concluimos",
+        "schlussfolgerung",
+        "folgerung",
+        "conclures",
+        "schlus"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    },
+    {
+      "claim_index": 1,
+      "claim": {
+        "target_type": "token_family",
+        "target": "conclude",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "conclude",
+        "conclusion",
+        "concludes",
+        "concluded",
+        "concluding",
+        "conclusively",
+        "conclusions"
+      ],
+      "S_weak": [
+        "conclure",
+        "schluss",
+        "abschließen",
+        "conclurent",
+        "conclu",
+        "concluyendo",
+        "conclures",
+        "schlus"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    },
+    {
+      "claim_index": 2,
+      "claim": {
+        "target_type": "token_family",
+        "target": "NSCoder",
+        "polarity": "suppress",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "nscoder",
+        "nskeyedarchiver",
+        "nskeyedunarchiver",
+        "nssecurecoding",
+        "nscoders"
+      ],
+      "S_weak": [
+        "ns-coder",
+        "ns_coder",
+        "coder",
+        "archiver",
+        "unarchiver",
+        "keyedarchiver",
+        "keyedunarchiver",
+        "ns-coders",
+        "ns_coders"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    }
+  ],
+  "debug": {
+    "hypothesis_raw_text": "{\n  \"summary\": \"This feature promotes tokens related to the English word 'conclusion' and its morphological variants, while suppressing unrelated or malformed tokens.\",\n  \"claims\": [\n    {\n      \"target_type\": \"token_family\",\n      \"target\": \"conclusion\",\n      \"polarity\": \"promote\",\n      \"scope\": \"focused\",\n      \"context_condition\": \"always\",\n      \"condition_note\": \"\",\n      \"manifestation\": \"logits\"\n    },\n    {\n      \"target_type\": \"token_family\",\n      \"target\": \"conclude\",\n      \"polarity\": \"promote\",\n      \"scope\": \"focused\",\n      \"context_condition\": \"always\",\n      \"condition_note\": \"\",\n      \"manifestation\": \"logits\"\n    },\n    {\n      \"target_type\": \"token_family\",\n      \"target\": \"NSCoder\",\n      \"polarity\": \"suppress\",\n      \"scope\": \"focused\",\n      \"context_condition\": \"always\",\n      \"condition_note\": \"\",\n      \"manifestation\": \"logits\"\n    }\n  ]\n}",
+    "compile_llm_debug": [
+      {
+        "claim_index": 0,
+        "seed_raw_text": "{\n  \"S_strong\": [\"conclusion\", \"conclude\", \"concludes\", \"Conclusion\", \"CONCLUSION\"],\n  \"S_weak\": [\"conclure\", \"Schluss\"],\n  \"compile_status\": \"success\"\n}",
+        "seed_json": {
+          "S_strong": [
+            "conclusion",
+            "conclude",
+            "concludes",
+            "Conclusion",
+            "CONCLUSION"
+          ],
+          "S_weak": [
+            "conclure",
+            "Schluss"
+          ],
+          "compile_status": "success"
+        },
+        "expand_raw_text": "{\"extra_strong\": [\"concluded\", \"concluding\", \"conclusion:\", \"conclusion.\"], \"extra_weak\": [\"conclut\", \"concluye\", \"concluimos\", \"Schlussfolgerung\", \"Folgerung\"]}",
+        "expand_json": {
+          "extra_strong": [
+            "concluded",
+            "concluding",
+            "conclusion:",
+            "conclusion."
+          ],
+          "extra_weak": [
+            "conclut",
+            "concluye",
+            "concluimos",
+            "Schlussfolgerung",
+            "Folgerung"
+          ]
+        }
+      },
+      {
+        "claim_index": 1,
+        "seed_raw_text": "{\"S_strong\": [\"conclude\", \"conclusion\", \"concludes\", \"Conclude\", \"Conclusion\", \"CONCLUSION\"], \"S_weak\": [\"conclure\", \"Schluss\"], \"compile_status\": \"success\"}",
+        "seed_json": {
+          "S_strong": [
+            "conclude",
+            "conclusion",
+            "concludes",
+            "Conclude",
+            "Conclusion",
+            "CONCLUSION"
+          ],
+          "S_weak": [
+            "conclure",
+            "Schluss"
+          ],
+          "compile_status": "success"
+        },
+        "expand_raw_text": "{\"extra_strong\": [\"concluded\", \"concluding\", \"conclusively\"], \"extra_weak\": [\"abschließen\", \"conclurent\", \"conclu\", \"concluyendo\"]}",
+        "expand_json": {
+          "extra_strong": [
+            "concluded",
+            "concluding",
+            "conclusively"
+          ],
+          "extra_weak": [
+            "abschließen",
+            "conclurent",
+            "conclu",
+            "concluyendo"
+          ]
+        }
+      },
+      {
+        "claim_index": 2,
+        "seed_raw_text": "{\"S_strong\": [\"NSCoder\"], \"S_weak\": [\"nscoder\", \"ns-coder\", \"ns_coder\"], \"compile_status\": \"success\"}",
+        "seed_json": {
+          "S_strong": [
+            "NSCoder"
+          ],
+          "S_weak": [
+            "nscoder",
+            "ns-coder",
+            "ns_coder"
+          ],
+          "compile_status": "success"
+        },
+        "expand_raw_text": "{\"extra_strong\": [\"NSKeyedArchiver\", \"NSKeyedUnarchiver\", \"NSSecureCoding\"], \"extra_weak\": [\"coder\", \"archiver\", \"unarchiver\", \"keyedarchiver\", \"keyedunarchiver\"]}",
+        "expand_json": {
+          "extra_strong": [
+            "NSKeyedArchiver",
+            "NSKeyedUnarchiver",
+            "NSSecureCoding"
+          ],
+          "extra_weak": [
+            "coder",
+            "archiver",
+            "unarchiver",
+            "keyedarchiver",
+            "keyedunarchiver"
+          ]
+        }
+      }
+    ]
+  },
+  "token_usage": {
+    "prompt_tokens": 4504,
+    "completion_tokens": 508,
+    "total_tokens": 5012
+  },
+  "paths": {
+    "round_dir": "logs\\layer-0\\feature-414\\20260407_223746\\round_0",
+    "raw_payload": "logs\\layer-0\\feature-414\\20260407_223746\\round_0\\layer0-feature414-neuronpedia-raw.json",
+    "evidence": "logs\\layer-0\\feature-414\\20260407_223746\\round_0\\layer0-feature414-output-evidence.json",
+    "hypothesis_ch": "logs\\layer-0\\feature-414\\20260407_223746\\round_0\\layer0-feature414-hypothesis-ch.json",
+    "compile_tokens": "logs\\layer-0\\feature-414\\20260407_223746\\round_0\\layer0-feature414-compile-tokens.json"
+  }
+}

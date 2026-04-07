@@ -1,0 +1,117 @@
+{
+  "feature_ref": {
+    "model_id": "gemma-2-2b",
+    "layer_id": "0",
+    "feature_id": "414",
+    "source": "0-gemmascope-res-16k"
+  },
+  "output_side_observation": {
+    "pos_pairs": [
+      {
+        "rank": 1,
+        "text": "▁conclusion",
+        "value": 0.842
+      },
+      {
+        "rank": 2,
+        "text": "▁conclude",
+        "value": 0.815
+      },
+      {
+        "rank": 3,
+        "text": "▁concludes",
+        "value": 0.781
+      },
+      {
+        "rank": 4,
+        "text": "▁Conclusion",
+        "value": 0.759
+      },
+      {
+        "rank": 5,
+        "text": "lets",
+        "value": 0.751
+      },
+      {
+        "rank": 6,
+        "text": "▁Schluss",
+        "value": 0.748
+      },
+      {
+        "rank": 7,
+        "text": "▁CONCLUSION",
+        "value": 0.716
+      },
+      {
+        "rank": 8,
+        "text": "Conclusion",
+        "value": 0.713
+      },
+      {
+        "rank": 9,
+        "text": "conclusion",
+        "value": 0.704
+      },
+      {
+        "rank": 10,
+        "text": "▁conclure",
+        "value": 0.665
+      }
+    ],
+    "neg_pairs": [
+      {
+        "rank": 1,
+        "text": "▁NSCoder",
+        "value": -0.866
+      },
+      {
+        "rank": 2,
+        "text": "",
+        "value": -0.841
+      },
+      {
+        "rank": 3,
+        "text": "▁nahilalakip",
+        "value": -0.781
+      },
+      {
+        "rank": 4,
+        "text": "toHaveBeenCalled",
+        "value": -0.741
+      },
+      {
+        "rank": 5,
+        "text": "▁gynhyrchwyd",
+        "value": -0.69
+      },
+      {
+        "rank": 6,
+        "text": "▁nakalista",
+        "value": -0.688
+      },
+      {
+        "rank": 7,
+        "text": "﻿/**",
+        "value": -0.686
+      },
+      {
+        "rank": 8,
+        "text": "Хьажоргаш",
+        "value": -0.675
+      },
+      {
+        "rank": 9,
+        "text": "aarrggbb",
+        "value": -0.669
+      },
+      {
+        "rank": 10,
+        "text": "▁autorytatywna",
+        "value": -0.666
+      }
+    ]
+  },
+  "annotation_candidates": [
+    "the term \"conclusion\" and its variations in context of summarizing arguments or findings"
+  ]
+}

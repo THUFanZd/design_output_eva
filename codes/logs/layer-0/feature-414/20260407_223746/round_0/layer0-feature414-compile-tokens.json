@@ -1,0 +1,104 @@
+{
+  "compiled_claims": [
+    {
+      "claim_index": 0,
+      "claim": {
+        "target_type": "token_family",
+        "target": "conclusion",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "conclusion",
+        "conclude",
+        "concludes",
+        "concluded",
+        "concluding",
+        "conclusion:",
+        "conclusion.",
+        "conclusions"
+      ],
+      "S_weak": [
+        "conclure",
+        "schluss",
+        "conclut",
+        "concluye",
+        "concluimos",
+        "schlussfolgerung",
+        "folgerung",
+        "conclures",
+        "schlus"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    },
+    {
+      "claim_index": 1,
+      "claim": {
+        "target_type": "token_family",
+        "target": "conclude",
+        "polarity": "promote",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "conclude",
+        "conclusion",
+        "concludes",
+        "concluded",
+        "concluding",
+        "conclusively",
+        "conclusions"
+      ],
+      "S_weak": [
+        "conclure",
+        "schluss",
+        "abschließen",
+        "conclurent",
+        "conclu",
+        "concluyendo",
+        "conclures",
+        "schlus"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    },
+    {
+      "claim_index": 2,
+      "claim": {
+        "target_type": "token_family",
+        "target": "NSCoder",
+        "polarity": "suppress",
+        "scope": "focused",
+        "context_condition": "always",
+        "condition_note": "",
+        "manifestation": "logits"
+      },
+      "S_strong": [
+        "nscoder",
+        "nskeyedarchiver",
+        "nskeyedunarchiver",
+        "nssecurecoding",
+        "nscoders"
+      ],
+      "S_weak": [
+        "ns-coder",
+        "ns_coder",
+        "coder",
+        "archiver",
+        "unarchiver",
+        "keyedarchiver",
+        "keyedunarchiver",
+        "ns-coders",
+        "ns_coders"
+      ],
+      "compile_status": "success",
+      "warnings": []
+    }
+  ]
+}
