@@ -1,0 +1,5 @@
+__pycache__/
+logs/
+used_output/
+steer_output/
+pairs copy.txt
