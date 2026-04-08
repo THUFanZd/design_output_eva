@@ -32,6 +32,7 @@ def build_hypothesis_messages(
         "}\n\n"
         "Hard constraints:\n"
         f"- claims length: 1 to {max_claims}\n"
+        "- include at least one promote claim and at least one suppress claim\n"
         "- each claim expresses one output-side effect only\n"
         "- morphological variants from the same lemma/stem must stay in ONE claim, not split across claims\n"
         "- if a token family includes multiple forms (e.g., conclude/conclusion/concluding), merge them into one target description\n"

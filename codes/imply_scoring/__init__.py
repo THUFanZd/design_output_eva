@@ -7,6 +7,7 @@ from .io import (
     load_step0_traces_from_steer_json,
 )
 from .topk_tlc import TopKTLCCalcConfig, compute_topk_targeted_logit_capture
+from .topk_polarity_accuracy import TopKPolarityAccuracyConfig, compute_topk_polarity_accuracy
 
 __all__ = [
     "DEFAULT_LOGS_ROOT",
@@ -17,5 +18,6 @@ __all__ = [
     "load_step0_traces_from_steer_json",
     "TopKTLCCalcConfig",
     "compute_topk_targeted_logit_capture",
+    "TopKPolarityAccuracyConfig",
+    "compute_topk_polarity_accuracy",
 ]
-
