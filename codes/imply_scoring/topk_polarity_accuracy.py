@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Sequence, Set
 
 from .contracts import CompiledClaimEntry, Step0TraceEvidence, TokenDelta
 from .io import normalize_token
+from .polarity import resolve_effective_polarity
 
 
 @dataclass
@@ -65,11 +66,12 @@ def _compute_single_claim_pa(
     weak_set = _normalize_token_set(claim.S_weak) - strong_set
     per_trace: List[Dict[str, Any]] = []
     for trace in traces:
+        effective_polarity = resolve_effective_polarity(claim.polarity, trace.scale)
         trace_result = _compute_trace_pa(
             trace=trace,
             strong_set=strong_set,
             weak_set=weak_set,
-            polarity=polarity,
+            polarity=effective_polarity,
             weak_weight=weak_weight,
             epsilon=epsilon,
         )
@@ -78,6 +80,7 @@ def _compute_single_claim_pa(
                 "sample_rank": trace.sample_rank,
                 "intervention_index": trace.intervention_index,
                 "scale": trace.scale,
+                "effective_polarity": effective_polarity,
                 **trace_result,
             }
         )

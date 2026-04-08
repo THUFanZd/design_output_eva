@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Sequence, Set
 
 from .contracts import CompiledClaimEntry, Step0TraceEvidence, TokenDelta
 from .io import normalize_token
+from .polarity import pick_bucket_by_effective_polarity, resolve_effective_polarity
 
 
 @dataclass
@@ -66,14 +67,14 @@ def _compute_single_claim_score(
     per_trace: List[Dict[str, Any]] = []
 
     for trace in traces:
-        token_rows = (
-            trace.top_positive_delta_tokens if polarity == "promote" else trace.top_negative_delta_tokens
-        )
+        effective_polarity = resolve_effective_polarity(claim.polarity, trace.scale)
+        _, use_positive = pick_bucket_by_effective_polarity(effective_polarity)
+        token_rows = trace.top_positive_delta_tokens if use_positive else trace.top_negative_delta_tokens
         trace_result = _compute_trace_coverage(
             token_rows=token_rows,
             strong_set=strong_set,
             weak_set=weak_set,
-            polarity=polarity,
+            polarity=effective_polarity,
             weak_weight=weak_weight,
             epsilon=epsilon,
         )
@@ -82,6 +83,7 @@ def _compute_single_claim_score(
                 "sample_rank": trace.sample_rank,
                 "intervention_index": trace.intervention_index,
                 "scale": trace.scale,
+                "effective_polarity": effective_polarity,
                 **trace_result,
             }
         )
@@ -157,4 +159,3 @@ def _get_contribution(*, delta_logit: float, polarity: str) -> float:
     if polarity == "promote":
         return max(delta_logit, 0.0)
     return max(-delta_logit, 0.0)
-
